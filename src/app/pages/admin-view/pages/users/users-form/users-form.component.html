@@ -1,0 +1,51 @@
+
+
+<div style="text-align:center">
+  <h1>
+{{ "Home" | translate  }}
+{{"Users.Welcome" | translate}} {{title}}!! 
+  </h1> 
+  <form [formGroup]="form" novalidate (ngSubmit)="updateUser()">
+      <section>
+        <mat-form-field  appearance="fill">
+          <mat-label>{{"Users.Name" | translate}}</mat-label>
+          <input matInput  formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>{{"Users.E-mail" | translate}}</mat-label>
+          <input matInput  formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>{{"Users.Phone" | translate}}</mat-label>
+          <input matInput  formControlName="phone">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>{{"Users.AlbumId" | translate}}</mat-label>
+          <input matInput  formControlName="albumId">
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill">
+          <mat-label>{{"Users.ThumbnailUrl" | translate}}</mat-label>
+          <input matInput  formControlName="thumbnailUrl">
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill">
+          <mat-label>{{"Users.Title" | translate}}</mat-label>
+          <input matInput  formControlName="title">
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill">
+          <mat-label>{{"Users.Url" | translate}}</mat-label>
+          <input matInput  formControlName="url">
+        </mat-form-field>
+
+        <button  mat-raised-button color="accent" type="submit">{{"Users.UpdateUser" | translate}}</button>
+
+      </section>
+  </form>
+    <p>Form value: {{ form.value | json }}</p>
+    <p>Form status: {{ form.status | json }}</p>
+</div>

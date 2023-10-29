@@ -1,0 +1,60 @@
+
+    <!-- ================================================> navbar <======================================= -->
+    <nav class="nav-height navbar navbar-expand-lg">
+      <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="d-flex side-nav-top">
+              <button (click)="asideMenu.emit()" mat-icon-button class="example-icon" aria-label="">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+              </button>
+          </div>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+
+              <ul class="navbar-nav d-flex align-items-center flex-row-reverse">
+
+                  <li class="nav-item ml-2">
+                    <button mat-icon-button [matMenuTriggerFor]="menu">
+                      <img 
+                        width="30"
+                        height="30"
+                        class="rounded" 
+                        [src]="user.imageUrl? user.imageUrl: 'assets/images/avatar/avatar.png'">   
+                          {{ user.name }}
+                    </button>
+                    <mat-menu #menu="matMenu">
+                      <button mat-menu-item [routerLink]="['/system/team/profile/', user.id]">
+                          {{'NavMenu.Profile' | translate}}
+                      </button>
+                      <button mat-menu-item (click)="onLogOut()">
+                          {{'NavMenu.Logout' | translate}}
+                      </button>
+                    </mat-menu>
+                  </li>
+                  <div class="vr border me-3 "></div>
+                  <!-- ==============> icon <============== -->
+                  <li class="nav-item dropdown">
+                      <button class="m-0 p-0" type="button" class="btn" mat-button [matMenuTriggerFor]="menubell">
+                          <i class="fa fa-language" aria-hidden="true"></i>
+                      </button>
+                      <mat-menu #menubell="matMenu" class="custom-menu">
+                        <ul class="list-group">
+                            <li class="list-group-item" (click)="setUserLang('ar')">
+                                {{'NavMenu.AR' | translate}}
+                            </li>
+                            <li class="list-group-item" (click)="setUserLang('en')">
+                                {{'NavMenu.EN' | translate}}
+                            </li>
+                        </ul>
+                      </mat-menu>
+                  </li>
+
+              </ul>
+
+          </div>
+
+      </div>
+  </nav>

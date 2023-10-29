@@ -1,0 +1,108 @@
+<div class="container">
+    <div class="main-body">
+    
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img [src]="user.imageUrl ? user.imageUrl : 'assets/images/avatar/avatar.png'" alt="Admin" class="rounded-circle" width="150">
+                    <div class="mt-3">
+                        <h5 class="my-3">{{ user.name }}</h5>
+                        <p class="text-muted mb-4">
+                              {{ user.city || ' city ' }} 
+                            / {{ user.area || ' area ' }} 
+                            / {{ user.buildingNo || ' buildingNo ' }} 
+                        </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mt-3">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                        <i class="fa fa-phone fa-lg" style="color: #333333;"></i>
+                        <p class="mb-0">{{ user.phone || '000 000 000'}}</p>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                        <i class="fa fa-at text-warning"></i>
+                        <p class="mb-0">{{ user.email }}</p>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                        <i class="fa fa-calendar"></i>
+                        <p class="mb-0">{{ user.createdAt | date:"dd/MM/yyyy HH:mm" }}</p>
+                      </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+
+                    <ng-container >
+                        <h5> {{"Users.Address" | translate}}</h5>
+                        <ul>
+                          <li class="d-flex align-items-cente align-self-center">
+                         
+                          </li>
+                        </ul>
+                      </ng-container>
+                      <ng-container >
+                        <p class="text-danger"> ! {{"Users.AddressNotFound" | translate}} </p>
+                      </ng-container>
+                </div>
+              </div>
+
+              <div class="row gutters-sm">
+                <div class="col-sm-12 mb-3">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      
+
+                        <section>
+                            <h4>{{"Users.Orders" | translate }}</h4>
+          
+                            <div class="table-responsive">
+                              <table class="table table-bordered">
+                                  <thead class="thead-dark">
+                                      <tr>
+                                          <th>{{"Users.No" | translate }}</th>
+                                          <th>{{"Users.ProductsCount" | translate }}</th>
+                                          <th>{{"Users.Price" | translate }}</th>
+                                          <th>{{"Users.Date" | translate }}</th>
+                                          <th>{{"Users.Status" | translate }}</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr >
+                                          <td></td>
+                                          <td></td>
+                                          <td> EG</td>
+                                          <!-- <td>Approved</td> -->
+                                          <td></td>
+                                          <td>
+                                            <button  class="btn">{{"Users.Show" | translate }}</button></td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                              <ng-container>
+                                  <h1 class="text-center text-danger" > {{"Users.NoOrders" | translate }}!</h1>
+                                  <a class="text-center text-danger w-100 d-block" > {{"Users.ShopNow" | translate }}</a>
+                              </ng-container>
+                              
+                              
+                            </div>
+                          </section>  
+
+
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+    </div>

@@ -1,0 +1,82 @@
+
+<div class="logo d-flex justify-content-center">
+    <a target="_blank"  routerLink="/">
+        <img width="80" src="assets/images/logo/logo.webp">
+    </a>
+</div>
+
+<hr />
+
+<div class="profile-info d-flex flex-column justify-content-center align-items-center text-enter">
+    <div class="profile-image">
+        <img width="50" height="50" [src]="user.imageUrl? user.imageUrl: 'assets/images/avatar/avatar.png'">
+    </div>
+    <div class="text-center"> 
+        {{ user.name }}<br>
+        <small class="text-primary">
+            {{ roleEnum[user.role] }}
+        </small>
+    </div>
+    <div class="profile-buttons d-flex justify-content-around">
+        <button mat-raised-button color="primary" (click)="toggelSideMenuOnMobile()">
+            <i class="fa fa-envelope"></i>
+        </button>
+        <button mat-raised-button color="primary"(click)="toggelSideMenuOnMobile()">
+            <i class="fa fa-comments"></i>
+        </button>
+        <button mat-raised-button color="primary" (click)="onLogOut()">
+            <i class="fa fa-power-off text-red-1"></i>
+        </button>
+    </div>
+</div>
+    
+<hr />
+<mat-list role="list">
+    <mat-list-item 
+        role="listitem"
+        routerLink="/users-form works!"
+        [routerLinkActiveOptions]="{exact: true}"
+        routerLinkActive="active-link">
+        <button 
+            mat-raised-button 
+            color="primary" 
+            routerLink="/admin"
+            (click)="toggelSideMenuOnMobile()">
+            <i class="fa fa-tachometer" aria-hidden="true"></i>
+            {{'SideMenu.Dashboard' | translate}}
+        </button>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+
+</mat-list>
+
+<!-- list -->
+<mat-accordion >
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false" *ngFor="let item of sideList">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <i [class]="item.icon" aria-hidden="true"></i>
+                <small *ngIf="item.count">{{ item.count }}</small>
+                {{ item.title }}
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-list role="list" *ngFor="let i of item.items">
+            <mat-list-item role="listitem">
+                <button 
+                    mat-raised-button 
+                    color="primary" 
+                    [routerLinkActiveOptions]="{exact: true}"
+                    [routerLink]="i.path"
+                    routerLinkActive="active-link"
+                    (click)="toggelSideMenuOnMobile()">
+                    <i [class]="i.icon" aria-hidden="true"></i>
+                    <small *ngIf="i.count">{{ i.count }}</small>
+                    {{ i.itemTitle }}
+                </button>
+            </mat-list-item>
+        </mat-list>
+    </mat-expansion-panel>
+</mat-accordion>
+

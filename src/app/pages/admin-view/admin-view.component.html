@@ -1,0 +1,38 @@
+<div class="loader" *ngIf="startLoader">
+    <mat-spinner></mat-spinner>
+</div>
+  
+<mat-drawer-container class="example-container" autosize [dir]="direction">
+  <mat-drawer #drawer class="example-sidenav d-print-none" [mode]="DrawerMode" > <!-- opened -->
+    <aside>
+      <app-side-menu (asideMenu)="drawer.toggle()"></app-side-menu>
+    </aside>
+  </mat-drawer>
+
+  <div class="">
+
+    <app-nav-menu (asideMenu)="isAsideMenu(drawer.toggle())"></app-nav-menu>
+
+    <main class="">
+      <section>
+        
+        <nav aria-label="breadcrumb" class="p-5 pb-0 pt-1 d-print-none">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item" [ngClass]="{ 'active' : last }" *ngFor="let i of eventUrlSplit; let last = last"><a>{{ i }}</a></li>
+          </ol>
+        </nav>
+
+        <h1 class="ps-5 fw-bold text-uppercase text-decoration-underline">{{ pageTitle }}</h1>
+
+        <div class="p-5 pt-2">
+          <router-outlet></router-outlet>
+        </div>
+
+        <app-footer></app-footer>
+      </section>
+    </main>
+  </div>
+
+</mat-drawer-container>
+
+  

@@ -1,0 +1,35 @@
+section{
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #1b3f4d;
+  form{
+    width: 350px;
+    height: 430px;
+    background-color: #1b3f4d;
+    border: 1px solid #0f77ad;
+    color: #fff;
+    border-radius: 4px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 35px ;
+    mat-form-field{
+      mat-label{
+        color: #fff;
+      }
+      input{
+        color: #fff;
+        &::placeholder{
+          color: #fff;
+        }
+      }
+    }
+    .row{
+      button{
+      }
+    }
+  }
+}

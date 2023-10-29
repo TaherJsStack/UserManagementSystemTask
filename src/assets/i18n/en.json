@@ -1,0 +1,74 @@
+{
+  "Login": {
+    "EnterYourE-mail": "Enter Your E-mail",
+    "EnterYourPassword": "Enter Your Password",
+    "InvalidE-mail": "Invalid E-mail",
+    "login": "login"
+  },
+  "Footer": {
+    "Rights": "© 2023 Dashboard Task. All rights reserved."
+  },
+  "NavMenu": {
+    "Profile": "Profile",
+    "Logout": "logout",
+    "AR": "ar",
+    "EN": "en"
+  },
+  "SideMenu": {
+    "Dashboard": "Dashboard",
+    "Users": "Users",
+    "List": "List",
+    "AddNew": "Add New"
+  },
+  "Dashboard": {
+    "Overview": "Overview",
+    "WelcomeToSystem": "Welcome, To System",
+    "Lorem": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint esse quis quidem possimus? Minus voluptates sunt ratione numquam atque delectus nemo expedita dolorem alias ipsum! Eaque repudiandae quo porro natus!",
+    "DataCount": "Data Count",
+    "DataActiveStateList": "Data active State List",
+    "Active": "active",
+    "NotActive": "not Active",
+    "Invoices": "Invoices",
+    "InvoicesLorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquet eros vel diam",
+    "CreateNew": "Create New",
+    "Category": "Category",
+    "CategoryLorem": "Pellentesque varius, elit vel volutpat sollicitudin, lacus quam efficitur augue",
+    "Product": "Product",
+    "ProductLorem": "Sed maximus, libero ac pharetra elementum, turpis nisi molestie neque, et tincidunt"
+  },
+  "Users": {
+    "Welcome": "Welcome to",
+    "Name": "name",
+    "E-mail": "e-mail",
+    "Phone": "phone",
+    "AlbumId": "albumId",
+    "ThumbnailUrl": "thumbnailUrl",
+    "Title": "title",
+    "Url": "Url",
+    "UpdateUser": "Update User",
+
+    "UsersList": "Users List",
+    "Filter": "Filter",
+    "CountOfUsers": "Count Of Users",
+    "Index": "Index",
+    "Image": "image",
+    "CreatedAt": "createdAt",
+    "Action": "Action",
+    "Show": "Show",
+    "Edit": "Edit",
+    "Delete": "Delete",
+    "NoDataMatchingTheFilter": "No data matching the filter",
+
+    "Address": "Address",
+    "AddressNotFound": "address not found",
+    "Orders": "Orders",
+    "ProductsCount": "Products Count",
+    "Price":"Price",
+    "Status":"Status",
+    "View":"View",
+    "NoOrders":"No Orders",
+    "ShopNow": "shop Now"
+   
+  }
+
+}

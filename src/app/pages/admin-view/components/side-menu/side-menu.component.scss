@@ -1,0 +1,222 @@
+.logo{}
+
+.profile-info{
+    margin: 14px 0 auto;
+    .profile-image{
+        border-radius: 50px;
+        overflow: hidden;
+    }
+    .profile-buttons{
+        margin: 7px 0px;
+        button{
+            background: #b2bec3;
+            font-size: 10px;
+            color: #000;
+            text-align: center;
+            height: 25px;
+            line-height: unset;
+            margin: 0 3px;
+            min-width: 30px;
+            padding: 0;
+        }
+    }
+}
+
+hr{
+    background-color: #000;
+    width: 80%;
+    margin: 5px auto;
+}
+
+mat-accordion{
+    mat-expansion-panel{
+        box-shadow: unset;
+        border-radius: 0 !important;
+        border-bottom: 1px solid #e6e6e6;
+        margin: 0;
+        .active-link::after{
+            left: 2rem;
+            line-height: 32px;
+            color: green;
+        }
+        mat-expansion-panel-header{
+            padding: 0 15px;
+            padding-inline-start: 32px;
+            font-weight: 500;
+            i{
+                margin-inline-end: 5px;
+            }
+            small{
+                position: absolute;
+                right: 15%;
+                color: red;
+                &::before,
+                &::after {
+                content: '';
+                position: absolute;
+                top: 0.5em;
+                left: 0;
+                width: 0.1em;
+                height: 0.1em;
+                background-color: transparent;
+                border-radius: 50%;
+                background-color: currentColor;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                }
+                &::before {
+                    animation: ping 1.7s ease infinite;
+                    opacity: 0.25;
+                    -webkit-animation: ping 1.7s ease infinite;
+                }
+            }
+            &.mat-expansion-panel-header.mat-expanded{
+                height: 45px;
+            }
+            mat-panel-title{  }
+        }
+        mat-list{
+            padding: 0;
+            mat-list-item{
+                height: 100%; 
+                button{
+                    background-color: transparent;                    
+                    text-align: inherit;
+                    padding-inline-start: 27px;
+                    color: #000;
+                    border-radius: 0;
+                    padding: 0 54px;
+                    i{
+                        margin-inline-end: 5px;
+                    }
+                    small{
+                        position: absolute;
+                        right: 15%;
+                        color: red;
+                        &::before,
+                        &::after {
+                        content: '';
+                        position: absolute;
+                        top: 1.25em;
+                        left: 0;
+                        width: 0.1em;
+                        height: 0.1em;
+                        background-color: transparent;
+                        border-radius: 50%;
+                        background-color: currentColor;
+                        -webkit-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        -ms-border-radius: 50%;
+                        -o-border-radius: 50%;
+                        }
+                        &::before {
+                            animation: ping 1.7s ease infinite;
+                            opacity: 0.25;
+                            -webkit-animation: ping 1.7s ease infinite;
+                        }
+                    }
+                    &:hover{
+                        background-color: #2d3436;
+                        color: #b2bec3;
+                    }
+                }
+            }
+        }
+    }
+}
+
+mat-list{
+    padding: 0;
+    mat-list-item{
+        button{
+            background: transparent;
+            text-align: inherit;
+            color: #000;
+            border-radius: 0;
+            padding-inline-start: 35px;
+            small{
+                position: absolute;
+                right: 15%;
+                color: red;
+                &::before,
+                &::after {
+                content: '';
+                position: absolute;
+                top: 1.25em;
+                left: 0;
+                width: 0.1em;
+                height: 0.1em;
+                background-color: transparent;
+                border-radius: 50%;
+                background-color: currentColor;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                }
+                &::before {
+                    animation: ping 1.7s ease infinite;
+                    opacity: 0.25;
+                    -webkit-animation: ping 1.7s ease infinite;
+                }
+            }
+        }
+    }
+}
+
+.active-link{
+    background: #dfe6e9 !important;
+}
+
+.active-link::after{
+    content: "\f13d";
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    font-size: 10px;
+    left: 1rem;
+    font-size: 10px;
+    line-height: 46px;
+}
+
+mat-expansion-panel:has(.active-link){
+    background-color: #b2bec3 !important;
+}
+
+@keyframes ping {
+    0% {
+      opacity: 0.5;
+      transform: scale(.1);
+      -webkit-transform: scale(.1);
+      -moz-transform: scale(.1);
+      -ms-transform: scale(.1);
+      -o-transform: scale(.1);
+      background-color: red;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(30);
+      -webkit-transform: scale(30);
+      -moz-transform: scale(30);
+      -ms-transform: scale(30);
+      -o-transform: scale(30);
+      background-color: red;
+    }
+  }
+  
+  // X-Large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) {  }
+  
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {  }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { }
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {}
